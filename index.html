@@ -7,140 +7,137 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Montserrat', sans-serif; }
-        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)); }
+        body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-white text-slate-900">
 
-    <!-- Navigation -->
-    <nav class="bg-white py-4 shadow-sm sticky top-0 z-50">
+    <!-- NAVIGATION BAR -->
+    <nav class="bg-white/95 backdrop-blur-sm py-4 shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-6 flex justify-between items-center">
-        <!-- UPDATED CLEAN LOGO -->
-            <div class="w-64">
+            <!-- FIXED LOGO SECTION -->
+            <div class="w-48 md:w-56">
                 <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
                     <!-- Palm Tree Leaves (Green) -->
-                    <path d="M260 80C240 50 190 45 160 70M265 75C255 35 210 20 180 35M275 70C275 30 240 10 215 15" stroke="#8BC34A" stroke-width="7" stroke-linecap="round" fill="none"/>
-                    <path d="M285 75C310 35 340 30 370 45M290 85C330 60 380 65 400 95" stroke="#8BC34A" stroke-width="7" stroke-linecap="round" fill="none"/>
-                    
+                    <path d="M220 80C200 50 150 45 120 70M225 75C215 35 170 20 140 35M235 70C235 30 200 10 175 15" stroke="#8BC34A" stroke-width="8" stroke-linecap="round" fill="none"/>
+                    <path d="M245 75C270 35 300 30 330 45M250 85C290 60 340 65 360 95" stroke="#8BC34A" stroke-width="8" stroke-linecap="round" fill="none"/>
                     <!-- Trunk (Grey) -->
-                    <path d="M280 90C280 50 310 20 310 20" stroke="#707070" stroke-width="5" stroke-linecap="round" fill="none"/>
-                    
+                    <path d="M240 90C240 50 270 20 270 20" stroke="#707070" stroke-width="6" stroke-linecap="round" fill="none"/>
                     <!-- Sun (Orange) -->
-                    <circle cx="335" cy="100" r="28" fill="#F58220"/>
-                    
-                    <!-- Top Wave (Blue) -->
-                    <path d="M120 120C180 80 280 80 340 125" fill="#008CD0"/>
-                    
-                    <!-- Bottom Wave (Grey) -->
-                    <path d="M160 145C220 115 320 115 420 145C380 165 200 165 160 145Z" fill="#707070"/>
-                    
-                    <!-- Typography (Modern Sans Serif) -->
-                    <text x="250" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="44" fill="#1A1A1A" style="letter-spacing: 2px;">ALOHA</text>
-                    <text x="250" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-weight="400" font-size="22" fill="#1A1A1A" style="letter-spacing: 6px;">DENTAL GROUP</text>
+                    <circle cx="295" cy="100" r="28" fill="#F58220"/>
+                    <!-- Waves -->
+                    <path d="M80 120C140 80 240 80 300 125" fill="#008CD0"/>
+                    <path d="M120 145C180 115 280 115 380 145C340 165 160 165 120 145Z" fill="#707070"/>
+                    <!-- Text -->
+                    <text x="250" y="195" text-anchor="middle" font-weight="700" font-size="52" fill="#1A1A1A" style="letter-spacing: 2px;">ALOHA</text>
+                    <text x="250" y="218" text-anchor="middle" font-weight="400" font-size="24" fill="#1A1A1A" style="letter-spacing: 6px;">DENTAL GROUP</text>
                 </svg>
+            </div>
+            <!-- MENU LINKS -->
+            <div class="hidden md:flex space-x-8 font-bold text-xs tracking-widest text-slate-600">
+                <a href="#doctors" class="hover:text-sky-600 transition">DOCTORS</a>
+                <a href="#services" class="hover:text-sky-600 transition">SERVICES</a>
+                <a href="#contact" class="hover:text-sky-600 transition">CONTACT</a>
+                <a href="tel:6505731336" class="bg-[#F58220] text-white px-5 py-2 rounded-full hover:shadow-lg transition">CALL NOW</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative h-[70vh] flex items-center justify-center text-center text-white overflow-hidden">
+    <!-- HERO SECTION -->
+    <section class="relative h-[75vh] flex items-center justify-center text-center text-white">
         <div class="absolute inset-0 bg-black/30 z-10"></div>
-        <!-- Using the beach image concept provided -->
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" class="absolute inset-0 w-full h-full object-cover" alt="Aloha Beach">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" class="absolute inset-0 w-full h-full object-cover" alt="Beach Background">
         <div class="relative z-20 px-6">
-            <h1 class="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">A Legacy of Smiles.</h1>
-            <p class="text-xl md:text-2xl font-light max-w-3xl mx-auto drop-shadow-md">Welcome to the next chapter of Aloha Dental Group, where world-class technology meets island-inspired care.</p>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 drop-shadow-xl">A Legacy of Smiles.</h1>
+            <p class="text-xl md:text-2xl font-light max-w-3xl mx-auto drop-shadow-md">
+                World-class technology meets island-inspired care in the heart of San Mateo.
+            </p>
         </div>
     </section>
 
-    <!-- Meet the Doctors -->
+    <!-- DOCTORS SECTION -->
     <section id="doctors" class="py-24 bg-white">
         <div class="container mx-auto px-6 max-w-6xl">
-            <h2 class="text-3xl font-bold text-center mb-16 uppercase tracking-widest text-slate-400">Our Experts</h2>
-            
-            <div class="grid md:grid-cols-2 gap-20">
+            <h2 class="text-center text-slate-400 uppercase tracking-widest font-bold mb-16">Our Expert Doctors</h2>
+            <div class="grid md:grid-cols-2 gap-16">
                 <!-- Dr. Codington -->
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-64 h-80 bg-slate-100 rounded-2xl mb-8 flex items-center justify-center text-slate-400 border border-slate-200">
+                <div class="text-center md:text-left flex flex-col items-center md:items-start">
+                    <div class="w-full aspect-[4/5] bg-slate-100 rounded-3xl mb-8 flex items-center justify-center text-slate-300 border border-slate-100">
                         [Photo of Dr. Terry Codington]
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-800">Dr. Terry Codington</h3>
-                    <p class="text-sky-600 font-semibold mb-4">Invisalign® Specialist</p>
+                    <h3 class="text-3xl font-bold mb-1">Dr. Terry Codington</h3>
+                    <p class="text-sky-600 font-bold tracking-wide text-sm mb-4 uppercase">Invisalign® Expert</p>
                     <p class="text-slate-600 leading-relaxed">
-                        With decades of experience and a reputation as one of the region's premier Invisalign providers, Dr. Codington continues to lead our orthodontic clinical care, ensuring his existing patients receive the elite results they've come to expect.
+                        A highly respected leader in Invisalign clinical care, Dr. Codington continues to provide elite orthodontic results for his patients, maintaining the high standard of excellence Aloha Dental Group is known for.
                     </p>
                 </div>
-
                 <!-- Dr. Bennett -->
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-64 h-80 bg-slate-100 rounded-2xl mb-8 flex items-center justify-center text-slate-400 border border-slate-200">
+                <div class="text-center md:text-left flex flex-col items-center md:items-start">
+                    <div class="w-full aspect-[4/5] bg-slate-100 rounded-3xl mb-8 flex items-center justify-center text-slate-300 border border-slate-100">
                         [Photo of Dr. Farah Bennett]
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-800">Dr. Farah Bennett</h3>
-                    <p class="text-sky-600 font-semibold mb-4">Advanced Aesthetics & General Dentistry</p>
-                    <p class="text-slate-600 leading-relaxed text-sm">
-                        Joining the practice to bring the next generation of dental technology, Dr. Bennett specializes in advanced aesthetic treatments. By utilizing the <strong>Fotona Laser</strong> for non-invasive rejuvenation and <strong>Invisalign</strong> for smile design, she crafts beautiful, healthy smiles with precision and a gentle touch.
+                    <h3 class="text-3xl font-bold mb-1">Dr. Farah Bennett</h3>
+                    <p class="text-sky-600 font-bold tracking-wide text-sm mb-4 uppercase">Advanced Aesthetic Dentistry</p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Specializing in advanced aesthetics, Dr. Bennett utilizes the <strong>Fotona Laser</strong> and <strong>Invisalign</strong> to create healthy, beautiful smiles. Her passion for cutting-edge technology ensures a gentle and precise patient experience.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-24 bg-slate-900 text-white">
+    <!-- SERVICES GRID -->
+    <section id="services" class="py-24 bg-slate-50">
         <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-6">
-                <div class="p-8 border border-white/10 rounded-xl hover:bg-white/5 transition">
-                    <h4 class="font-bold text-xl mb-3 text-sky-400">Invisalign®</h4>
-                    <p class="text-sm opacity-70">Expert smile alignment from Diamond-level providers.</p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-[#008CD0] p-10 rounded-2xl text-white">
+                    <h4 class="font-bold text-xl mb-2">Invisalign®</h4>
+                    <p class="opacity-80 text-sm">Expert clear aligner therapy for all ages.</p>
                 </div>
-                <div class="p-8 border border-white/10 rounded-xl hover:bg-white/5 transition">
-                    <h4 class="font-bold text-xl mb-3 text-[#F58220]">Fotona Laser</h4>
-                    <p class="text-sm opacity-70">Advanced laser aesthetics for restorative and cosmetic excellence.</p>
+                <div class="bg-[#F58220] p-10 rounded-2xl text-white">
+                    <h4 class="font-bold text-xl mb-2 text-white">Fotona Laser</h4>
+                    <p class="opacity-80 text-sm">Advanced laser treatments for aesthetic excellence.</p>
                 </div>
-                <div class="p-8 border border-white/10 rounded-xl hover:bg-white/5 transition">
-                    <h4 class="font-bold text-xl mb-3 text-sky-400">Implants</h4>
-                    <p class="text-sm opacity-70">Permanent, natural-feeling solutions for missing teeth.</p>
+                <div class="bg-slate-700 p-10 rounded-2xl text-white">
+                    <h4 class="font-bold text-xl mb-2">Implants</h4>
+                    <p class="opacity-80 text-sm">Safe, permanent solutions for smile restoration.</p>
                 </div>
-                <div class="p-8 border border-white/10 rounded-xl hover:bg-white/5 transition">
-                    <h4 class="font-bold text-xl mb-3 text-[#89C74A]">Sleep Apnea</h4>
-                    <p class="text-sm opacity-70">Comfortable oral appliance therapy for a better night's rest.</p>
+                <div class="bg-[#8BC34A] p-10 rounded-2xl text-white">
+                    <h4 class="font-bold text-xl mb-2">Sleep Apnea</h4>
+                    <p class="opacity-80 text-sm">Quiet and comfortable oral appliance therapy.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Location & Contact -->
-    <section id="contact" class="py-24 bg-white">
+    <!-- CONTACT & MAP -->
+    <section id="contact" class="py-24">
         <div class="container mx-auto px-6 flex flex-col md:flex-row gap-16 items-center">
             <div class="md:w-1/2">
-                <h2 class="text-4xl font-bold mb-6">Experience the Aloha Spirit.</h2>
-                <p class="text-xl text-slate-600 mb-8">Ready for your consultation? We are located in the heart of San Mateo and are currently accepting new patients.</p>
-                <div class="space-y-4">
-                    <p class="flex items-center gap-4 text-lg">
-                        <span class="font-bold text-sky-600 uppercase text-sm w-24">Visit</span>
-                        424 N. San Mateo Drive, San Mateo, CA
-                    </p>
-                    <p class="flex items-center gap-4 text-lg">
-                        <span class="font-bold text-sky-600 uppercase text-sm w-24">Call</span>
-                        (650) 573-1336
-                    </p>
-                    <p class="flex items-center gap-4 text-lg">
-                        <span class="font-bold text-sky-600 uppercase text-sm w-24">Hours</span>
-                        Mon – Wed: 8:00 AM – 4:00 PM
-                    </p>
+                <h2 class="text-4xl font-bold mb-6">Visit Our Office</h2>
+                <div class="space-y-6">
+                    <div>
+                        <p class="text-sky-600 font-bold text-xs tracking-widest uppercase mb-1">Location</p>
+                        <p class="text-xl">424 N. San Mateo Drive<br>San Mateo, CA 94401</p>
+                    </div>
+                    <div>
+                        <p class="text-sky-600 font-bold text-xs tracking-widest uppercase mb-1">Office Hours</p>
+                        <p class="text-xl">Mon – Wed: 8:00 AM – 4:00 PM</p>
+                    </div>
+                    <div>
+                        <p class="text-sky-600 font-bold text-xs tracking-widest uppercase mb-1">Phone</p>
+                        <a href="tel:6505731336" class="text-3xl font-bold hover:text-sky-600 transition underline underline-offset-8 decoration-sky-100">(650) 573-1336</a>
+                    </div>
                 </div>
             </div>
-            <div class="md:w-1/2 w-full h-96 bg-slate-200 rounded-3xl overflow-hidden shadow-2xl">
-                <!-- Map Placeholder -->
+            <div class="md:w-1/2 w-full h-96 rounded-3xl overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition duration-500">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.4682447470634!2d-122.3274291!3d37.567595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f991f860579e5%3A0xc66699252c89f55!2s424%20N%20San%20Mateo%20Dr%2C%20San%20Mateo%2C%20CA%2094401!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 bg-slate-50 text-center border-t border-slate-200">
-        <p class="text-slate-400 text-sm">&copy; 2024 Aloha Dental Group. All rights reserved.</p>
+    <footer class="py-12 bg-slate-50 border-t border-slate-100 text-center">
+        <p class="text-slate-400 text-xs tracking-widest uppercase">&copy; 2024 Aloha Dental Group San Mateo</p>
     </footer>
 
 </body>
