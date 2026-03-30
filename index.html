@@ -10,48 +10,81 @@
         body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
         .hero-overlay { background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5)); }
         
-        /* LOGO MAXIMIZATION */
+        /* LOGO SCALING - Maintained as requested */
         .logo-img {
-            height: 320px !important; /* Massively increased to be the dominant feature */
+            height: 280px !important;
             width: auto;
             display: block;
-            transform: scale(1.4); /* Pushes the logo to fill any internal SVG margins */
+            transform: scale(1.4);
             transform-origin: left center;
         }
         
-        @media (max-width: 768px) {
-            .logo-img { 
-                height: 180px !important; 
-                transform: scale(1.2);
-            }
+        @media (max-width: 1024px) {
+            .logo-img { height: 160px !important; transform: scale(1.1); }
         }
+
+        header { z-index: 100; }
     </style>
 </head>
 <body class="bg-white text-slate-900">
 
-    <!-- NAVIGATION -->
-    <!-- py-0 removes the extra white space, letting the logo define the header height -->
-    <nav class="bg-white py-0 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center sticky top-0 z-50 shadow-md border-b border-slate-100">
+    <!-- PERSISTENT HEADER START -->
+    <header class="sticky top-0 shadow-lg">
         
-        <!-- LOGO SECTION -->
-        <a href="#" class="flex items-center">
-            <img src="./logo.svg" alt="Aloha Dental Group Logo" class="logo-img transition-transform duration-500 hover:brightness-110">
-        </a>
+        <!-- TOP UTILITY BAR (Info Tier) -->
+        <div class="bg-slate-50 border-b border-slate-200 py-2 px-6 md:px-12">
+            <div class="container mx-auto flex flex-col lg:flex-row justify-end items-center gap-4 lg:gap-8 text-[11px] font-semibold text-slate-600 tracking-tight">
+                
+                <!-- Phone -->
+                <a href="tel:6505731336" class="flex items-center gap-2 hover:text-sky-600 transition">
+                    <svg class="w-4 h-4 text-[#4D96D2]" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                    (650) 573-1336
+                </a>
 
-        <!-- NAV LINKS -->
-        <div class="flex items-center space-x-8 md:space-x-12 text-sm md:text-base font-bold tracking-widest text-slate-700">
-            <a href="#doctors" class="hover:text-sky-500 transition uppercase">The Doctors</a>
-            <a href="#services" class="hover:text-sky-500 transition uppercase">Services</a>
-            <a href="#contact" class="hover:text-sky-500 transition uppercase">Contact</a>
-            
-            <a href="tel:6505731336" class="bg-[#F29231] text-white px-10 py-5 rounded-full hover:bg-orange-600 transition shadow-lg hover:shadow-2xl transform hover:-translate-y-1 text-base md:text-lg">
-                CALL NOW
-            </a>
+                <!-- Address -->
+                <a href="https://www.google.com/maps/search/?api=1&query=424+N.+San+Mateo+Drive+San+Mateo+CA+94401" target="_blank" class="flex items-center gap-2 hover:text-sky-600 transition">
+                    <svg class="w-4 h-4 text-[#4D96D2]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                    424 N. San Mateo Drive, San Mateo, CA 94401
+                </a>
+
+                <!-- Hours & Footnote -->
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-[#4D96D2]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+                    <span>Mon–Wed: 8am–6pm | Thu–Fri: 8am–6pm* | Sat: 8am–2pm*</span>
+                    <span class="text-[9px] text-slate-400 italic px-2 border-l border-slate-300 ml-2">*By Appt Only</span>
+                </div>
+            </div>
         </div>
-    </nav>
+
+        <!-- MAIN NAVIGATION (Action Tier) -->
+        <nav class="bg-white py-0 px-6 md:px-12">
+            <div class="container mx-auto flex justify-between items-center">
+                <!-- LOGO -->
+                <a href="#" class="flex items-center py-2">
+                    <img src="./logo.svg" alt="Aloha Dental Group Logo" class="logo-img transition-transform duration-500 hover:brightness-110">
+                </a>
+
+                <!-- NAV & CTA -->
+                <div class="flex items-center space-x-6 lg:space-x-12">
+                    <div class="hidden md:flex space-x-8 text-sm font-bold tracking-widest text-slate-700">
+                        <a href="#doctors" class="hover:text-sky-500 transition uppercase">The Doctors</a>
+                        <a href="#services" class="hover:text-sky-500 transition uppercase">Services</a>
+                        <a href="#contact" class="hover:text-sky-500 transition uppercase text-nowrap">Contact Us</a>
+                    </div>
+                    
+                    <!-- THE PRIMARY CTA -->
+                    <a href="https://app.nexhealth.com/appt/aloha-dental-group?lid=344703" target="_blank" 
+                       class="bg-[#F29231] text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-orange-600 transition shadow-lg hover:shadow-2xl transform hover:-translate-y-1 text-center whitespace-nowrap">
+                        BOOK NOW
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- HEADER END -->
 
     <!-- HERO SECTION -->
-    <section class="relative h-[80vh] flex items-center justify-center overflow-hidden">
+    <section class="relative h-[75vh] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 hero-overlay z-10"></div>
         <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" class="absolute inset-0 w-full h-full object-cover" alt="Hawaii Beach">
         
@@ -66,7 +99,7 @@
     <!-- DOCTORS -->
     <section id="doctors" class="py-32 bg-white">
         <div class="container mx-auto px-10 max-w-6xl">
-            <h2 class="text-center text-slate-300 font-bold uppercase tracking-[0.4em] text-xs mb-20">Our Expert Doctors</h2>
+            <h2 class="text-center text-slate-300 font-bold uppercase tracking-[0.4em] text-xs mb-20 text-nowrap">Our Expert Doctors</h2>
             <div class="grid md:grid-cols-2 gap-24 items-start">
                 <div class="group">
                     <div class="bg-slate-50 aspect-[4/5] rounded-3xl mb-10 overflow-hidden border border-slate-100 shadow-sm transition duration-500 group-hover:shadow-2xl">
@@ -98,25 +131,35 @@
 
     <!-- SERVICES -->
     <section id="services" class="py-32 bg-slate-50">
-        <div class="container mx-auto px-10 max-w-7xl">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="bg-[#4D96D2] p-12 text-white rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-500">
+        <div class="container mx-auto px-10 max-w-7xl text-center">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-20">
+                <div class="bg-[#4D96D2] p-12 text-white rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-500 text-left">
                     <h4 class="font-bold text-2xl mb-4">Invisalign®</h4>
                     <p class="text-sm opacity-90 leading-relaxed">Expert clear aligner therapy for a perfectly aligned smile without brackets or wires.</p>
                 </div>
-                <div class="bg-[#F29231] p-12 text-white rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-500">
+                <div class="bg-[#F29231] p-12 text-white rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-500 text-left">
                     <h4 class="font-bold text-2xl mb-4 text-white">Laser Aesthetics</h4>
                     <p class="text-sm opacity-90 leading-relaxed">Non-invasive facial rejuvenation and precision dental care using Fotona technology.</p>
                 </div>
-                <div class="bg-slate-700 p-12 text-white rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-500">
+                <div class="bg-slate-700 p-12 text-white rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-500 text-left">
                     <h4 class="font-bold text-2xl mb-4">Implants</h4>
                     <p class="text-sm opacity-90 leading-relaxed">The permanent, natural-feeling solution for replacing missing teeth and restoring confidence.</p>
                 </div>
-                <div class="bg-[#87BC4E] p-12 text-white rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-500">
+                <div class="bg-[#87BC4E] p-12 text-white rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-500 text-left">
                     <h4 class="font-bold text-2xl mb-4 text-white">Sleep Apnea</h4>
                     <p class="text-sm opacity-90 leading-relaxed">Breathe easier and sleep better with quiet, custom-fitted oral appliance therapy.</p>
                 </div>
             </div>
+
+            <!-- SECONDARY BOOK NOW CTA -->
+             <div class="bg-white p-12 rounded-[3rem] shadow-xl border border-slate-100 max-w-4xl mx-auto">
+                <h3 class="text-3xl font-bold mb-4">Ready for a consultation?</h3>
+                <p class="text-slate-500 mb-8">Schedule your visit with Dr. Bennett or Dr. Codington today using our easy online booking.</p>
+                <a href="https://app.nexhealth.com/appt/aloha-dental-group?lid=344703" target="_blank" 
+                   class="bg-[#F29231] text-white px-16 py-6 rounded-full font-bold text-xl hover:bg-orange-600 transition shadow-lg inline-block">
+                    BOOK AN APPOINTMENT
+                </a>
+             </div>
         </div>
     </section>
 
@@ -131,12 +174,13 @@
                         <p class="text-3xl text-slate-700 font-light leading-relaxed">424 N. San Mateo Drive<br>San Mateo, CA 94401</p>
                     </div>
                     <div>
-                        <span class="block text-[#F29231] font-bold text-xs uppercase tracking-[0.3em] mb-3">Office Hours</span>
-                        <p class="text-3xl text-slate-700 font-light">Monday – Wednesday: 8:00 AM – 4:00 PM</p>
+                        <span class="block text-[#F29231] font-bold text-xs uppercase tracking-[0.3em] mb-3 text-nowrap">Office Hours</span>
+                        <p class="text-3xl text-slate-700 font-light">Mon – Fri: 8:00 AM – 6:00 PM*<br>Sat: 8:00 AM – 2:00 PM*</p>
+                        <p class="text-slate-400 italic text-sm mt-2">*Thursday, Friday, and Saturday by appointment only.</p>
                     </div>
                     <div>
                         <span class="block text-[#F29231] font-bold text-xs uppercase tracking-[0.3em] mb-3">Direct Line</span>
-                        <a href="tel:6505731336" class="text-5xl font-bold text-slate-900 border-b-8 border-sky-50 hover:border-sky-100 transition">(650) 573-1336</a>
+                        <a href="tel:6505731336" class="text-5xl font-bold text-slate-900 border-b-8 border-sky-50 hover:border-sky-100 transition whitespace-nowrap">(650) 573-1336</a>
                     </div>
                 </div>
             </div>
@@ -146,6 +190,7 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="py-20 text-center border-t border-slate-50 bg-slate-50/50">
         <p class="text-slate-300 text-[10px] uppercase tracking-[0.5em]">&copy; 2024 Aloha Dental Group San Mateo</p>
     </footer>
