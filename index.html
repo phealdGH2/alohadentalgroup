@@ -12,10 +12,10 @@
         
         /* THE FIX: scroll-margin-top prevents the sticky header from covering titles */
         section[id] {
-            scroll-margin-top: 210px; /* Adjusts for the height of your 2-tier header */
+            scroll-margin-top: 210px; 
         }
 
-        /* LOGO SIZE (The 170px height you liked) */
+        /* LOGO SIZE (The 170px height) */
         .logo-img {
             height: 170px !important;
             width: auto;
@@ -26,7 +26,7 @@
         
         @media (max-width: 1024px) {
             .logo-img { height: 110px !important; transform: scale(1.1); }
-            section[id] { scroll-margin-top: 150px; } /* Smaller margin for mobile header */
+            section[id] { scroll-margin-top: 150px; }
         }
 
         .btn-pop {
@@ -102,18 +102,19 @@
             
             <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-6 items-start">
                 
+                <!-- 1. Dr. Farah Bennett -->
                 <div class="group">
-                    <div class="bg-[#F9FBFD] aspect-[4/5] rounded-xl mb-4 overflow-hidden border border-slate-100 shadow-sm transition duration-500 group-hover:shadow-lg flex flex-col items-center justify-center p-6 text-center">
-                        <svg class="w-10 h-10 text-slate-200 mb-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
-                        <span class="text-slate-400 font-bold uppercase tracking-widest text-[8px]">Photo Coming Soon</span>
+                    <div class="bg-slate-50 aspect-[4/5] rounded-xl mb-4 overflow-hidden border border-slate-100 shadow-sm transition duration-500 group-hover:shadow-lg">
+                        <img src="./bennett.jpeg" alt="Dr. Farah Bennett" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold mb-1 text-slate-800 uppercase tracking-tight leading-none">Dr. Farah Bennett</h3>
                     <p class="text-[#4D96D2] font-bold text-[9px] uppercase tracking-widest mb-3">Advanced Aesthetics</p>
                     <p class="text-slate-500 leading-relaxed text-[13px]">
-                        Utilizing Fotona Laser and Invisalign to create radiant smiles with precision and comfort.
+                        Utilizing state-of-the-art **Fotona Laser technology** and Invisalign to create radiant smiles with precision and comfort.
                     </p>
                 </div>
 
+                <!-- 2. Dr. Terry Codington -->
                 <div class="group">
                     <div class="bg-slate-50 aspect-[4/5] rounded-xl mb-4 overflow-hidden border border-slate-100 shadow-sm transition duration-500 group-hover:shadow-lg">
                         <img src="./codington.webp" alt="Dr. Terry Codington" class="w-full h-full object-cover">
@@ -121,10 +122,11 @@
                     <h3 class="text-lg font-bold mb-1 text-slate-800 uppercase tracking-tight leading-none">Dr. Terry Codington</h3>
                     <p class="text-[#4D96D2] font-bold text-[9px] uppercase tracking-widest mb-3">Invisalign® Expert</p>
                     <p class="text-slate-500 leading-relaxed text-[13px]">
-                        A leader in clear aligner therapy, providing elite Invisalign care with expert results.
+                        A leader in clear aligner therapy, providing elite Invisalign care with expert-level clinical results.
                     </p>
                 </div>
 
+                <!-- 3. Dr. Mark Abramson -->
                 <div class="group">
                     <div class="bg-slate-50 aspect-[4/5] rounded-xl mb-4 overflow-hidden border border-slate-100 shadow-sm transition duration-500 group-hover:shadow-lg">
                         <img src="./abramson.webp" alt="Dr. Mark Abramson" class="w-full h-full object-cover">
@@ -132,7 +134,7 @@
                     <h3 class="text-lg font-bold mb-1 text-slate-800 uppercase tracking-tight leading-none">Dr. Mark Abramson</h3>
                     <p class="text-[#4D96D2] font-bold text-[9px] uppercase tracking-widest mb-3">TMJ & Sleep Medicine</p>
                     <p class="text-slate-500 leading-relaxed text-[13px]">
-                        Developer of the **OASYS Oral Lift™**, specializing in non-invasive solutions for chronic pain.
+                        Developer of the **OASYS Oral Lift™**, specializing in non-invasive solutions for chronic pain and sleep-disordered breathing.
                     </p>
                 </div>
 
@@ -175,7 +177,7 @@
                     <h5 class="font-bold text-[11px] uppercase tracking-wider text-slate-700">Teeth Whitening</h5>
                 </div>
                 <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:border-slate-300 transition text-center group">
-                    <div class="text-slate-500 mb-3 flex justify-center group-hover:scale-110 transition"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a2 2 0 00-1.96 1.414l-.727 2.903a2 2 0 01-3.57 0l-.727-2.903a2 2 0 00-1.96-1.414l-2.387.477a2 2 0 00-1.022.547l-2.387 2.387a2 2 0 102.828 2.828l2.387-2.387a2 2 0 00.547-1.022l.477-2.387a2 2 0 00-1.414-1.96l-2.903-.727a2 2 0 010-3.57l2.903-.727a2 2 0 001.414-1.96l.477-2.387a2 2 0 00-.547-1.022L2.343 5.172a2 2 0 00-2.828 2.828l2.387 2.387a2 2 0 001.022.547l2.387.477a2 2 0 001.96-1.414l.727-2.903a2 2 0 013.57 0l.727 2.903a2 2 0 001.96 1.414l2.387-.477a2 2 0 001.022-.547l2.387-2.387a2 2 0 10-2.828-2.828l-2.387 2.387a2 2 0 00-.547 1.022l-.477 2.387a2 2 0 001.414-1.96l2.903.727a2 2 0 010 3.57l-2.903.727a2 2 0 00-1.414 1.96l-.477 2.387a2 2 0 00.547 1.022l2.387 2.387a2 2 0 002.828-2.828l-2.387-2.387z"></path></svg></div>
+                    <div class="text-slate-500 mb-3 flex justify-center group-hover:scale-110 transition"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a2 2 0 00-1.96 1.414l-.727 2.903a2 2 0 01-3.57 0l-.727-2.903a2 2 0 00-1.96-1.414l-2.387.477a2 2 0 00-1.022.547l-2.387 2.387a2 2 0 102.828 2.828l2.387-2.387a2 2 0 00.547-1.022l.477-2.387a2 2 0 00-1.414-1.96l-2.903-.727a2 2 0 010-3.57l2.903-.727a2 2 0 001.414-1.96l.477-2.387a2 2 0 00-.547-1.022L2.343 5.172a2 2 0 00-2.828 2.828l2.387 2.387a2 2 0 001.022.547l2.387.477a2 2 0 001.96-1.414l.727-2.903a2 2 0 013.57 0l.727 2.903a2 2 0 001.96 1.414l2.387-.477a2 2 0 001.022-.547l2.387-2.387a2 2 0 10-2.828-2.828l-2.387 2.387a2 2 0 00-.547 1.022l-.477 2.387a2 2 0 001.414 1.96l2.903.727a2 2 0 010 3.57l-2.903.727a2 2 0 00-1.414 1.96l-.477 2.387a2 2 0 00.547 1.022l2.387 2.387a2 2 0 002.828-2.828l-2.387-2.387z"></path></svg></div>
                     <h5 class="font-bold text-[11px] uppercase tracking-wider text-slate-700">Crowns & Fillings</h5>
                 </div>
                 <div class="bg-white p-6 rounded-xl border border-red-50 shadow-sm hover:border-red-200 transition text-center group">
@@ -213,7 +215,7 @@
                         <span class="block text-[#F29231] font-bold text-[9px] uppercase tracking-[0.3em] mb-1">Office Hours</span>
                         <p class="text-xl text-slate-700 font-light mb-0.5">Mon–Wed: 8:00 AM – 6:00 PM</p>
                         <p class="text-xl text-slate-700 font-light">Thurs–Sat*: 8:00 AM – 6:00 PM</p>
-                        <p class="text-[#87BC4E] font-bold italic text-[10px] mt-1 uppercase tracking-wider">*By Appointment Only</p>
+                        <p class="text-[#87BC4E] font-bold italic text-[10px] mt-1 uppercase tracking-wider text-nowrap">*By Appointment Only</p>
                     </div>
                     <div>
                         <span class="block text-[#F29231] font-bold text-[9px] uppercase tracking-[0.3em] mb-1">Direct Line</span>
