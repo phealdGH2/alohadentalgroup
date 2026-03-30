@@ -9,15 +9,21 @@
     <style>
         body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
         .hero-overlay { background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)); }
+        /* This ensures the logo isn't constrained by standard line heights */
+        .logo-container img {
+            max-height: none !important;
+        }
     </style>
 </head>
 <body class="bg-white text-slate-900">
 
     <!-- NAVIGATION -->
-    <nav class="bg-white py-4 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center sticky top-0 z-50 shadow-sm border-b border-slate-50">
-        <!-- LOGO IMAGE (Points to the SVG file you uploaded) -->
-        <a href="#" class="mb-4 md:mb-0">
-            <img src="./logo.svg" alt="Aloha Dental Group Logo" class="h-24 md:h-32 w-auto object-contain">
+    <!-- Increased py-4 to py-8 to give the larger logo room to breathe -->
+    <nav class="bg-white py-8 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center sticky top-0 z-50 shadow-sm border-b border-slate-50">
+        
+        <!-- LOGO SECTION: Increased from h-32 to h-56 -->
+        <a href="#" class="logo-container mb-6 md:mb-0">
+            <img src="./logo.svg" alt="Aloha Dental Group Logo" class="h-40 md:h-56 w-auto object-contain scale-125 transition-transform duration-500">
         </a>
 
         <!-- NAV LINKS -->
@@ -25,7 +31,7 @@
             <a href="#doctors" class="hover:text-sky-500 transition uppercase">The Doctors</a>
             <a href="#services" class="hover:text-sky-500 transition uppercase">Services</a>
             <a href="#contact" class="hover:text-sky-500 transition uppercase">Contact</a>
-            <a href="tel:6505731336" class="bg-[#F29231] text-white px-6 py-3 rounded-full hover:bg-orange-600 transition shadow-md">CALL NOW</a>
+            <a href="tel:6505731336" class="bg-[#F29231] text-white px-8 py-4 rounded-full hover:bg-orange-600 transition shadow-md hover:shadow-xl transform hover:-translate-y-1">CALL NOW</a>
         </div>
     </nav>
 
@@ -47,7 +53,6 @@
         <div class="container mx-auto px-10 max-w-6xl">
             <h2 class="text-center text-slate-300 font-bold uppercase tracking-[0.4em] text-xs mb-20">Our Expert Doctors</h2>
             <div class="grid md:grid-cols-2 gap-24 items-start">
-                <!-- Dr. Codington -->
                 <div class="group">
                     <div class="bg-slate-50 aspect-[4/5] rounded-3xl mb-10 overflow-hidden border border-slate-100 shadow-sm transition duration-500 group-hover:shadow-2xl">
                         <div class="w-full h-full flex items-center justify-center text-slate-300 font-bold uppercase tracking-widest text-[10px]">
@@ -60,7 +65,6 @@
                         A renowned leader in clear aligner therapy, Dr. Codington has built a legacy of excellence in San Mateo. He continues to lead our Invisalign clinical care, ensuring every patient achieves an elite result.
                     </p>
                 </div>
-                <!-- Dr. Bennett -->
                 <div class="group">
                     <div class="bg-slate-50 aspect-[4/5] rounded-3xl mb-10 overflow-hidden border border-slate-100 shadow-sm transition duration-500 group-hover:shadow-2xl">
                         <div class="w-full h-full flex items-center justify-center text-slate-300 font-bold uppercase tracking-widest text-[10px]">
